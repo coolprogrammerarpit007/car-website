@@ -1,0 +1,97 @@
+// Artisan Commands List
+
+php artisan about -> Tells about the project
+php artisan list -> lists all the artisan commands
+php artisan make help -> lists all make command group
+
+// to know about a specific command
+// php artisan make:controller --help
+
+
+// Artisan command to name all available commands in queue namespace
+php artisan queue help -> will list all the commands come under queue
+
+
+// Artisan command to give knowledge about migrate:refresh
+
+// to get knowledge about migrate comand
+ // php artisan migrate --help
+
+// to migrate:refresh
+php artisan migrate :refresh --help
+
+// config/app.php -> here all routing and miidlewares are configured.
+// congig folders contains all configuration files for our system.
+
+// Request Lifecycle in Laravel
+
+In Laravel Application, when clent sends a request, it starts in public/index.php (Entry Point), this index.php file includes vendor/autoload.php file and loads this(autoload.php) file, then this create application in bootstrap/app.php, the application itself loads configuration files and initiates service providers. Service Providers in laravel prepare and configure the application, handling tasks like registering services,event listeners,middlewares and routes, they ensure both core and custom features are set up properly making the application ready to function efficently then the request is send to the router, route takes the request finds the corresponding controller function to execute and executes that, optinally there might be a middleware on the road.(middleware is code which executes before request receives to controller and maybe blocks it) after that response will be send to browser or if there is middleware b/w then request is first passed to middleware and then returned to the user.
+
+
+// configuration
+
+// to publish configuration file
+// php artisan config:publish
+
+// dump() and dd are debugging functions
+// dump() will print value but not stop the further execution of the program where as dd() will stop the execution of the program and print the value.
+
+// Available Request Methods
+Route::get($url,$callback);
+Route::post($url,$callback);
+Route::put($url,$callback);
+Route::patch($url,$callback);
+Route::delete($url,$callback);
+Route::options($url,$callback);
+
+// Route that matches multiple route Methods
+Route::match(['get','post'],'/',function(){
+
+});
+
+
+// Route that matches all request Methods
+Route::any('/',function(){
+
+});
+
+// Redirect routes
+Route::redirect('/home','/');
+
+// view routesp
+Route::view('/','home');
+
+// this will show registered routes
+
+php artisan route:list
+
+// to show routes only registered with user
+php artisan route:list --only-vendor
+
+// to see routes which are part of API
+php artisan route:list --path=api
+
+// Route Caching
+php artisan route:cache
+
+// controllers
+// controller is a class that contains methods that handle HTTP requests, and return HTTP responses.
+
+php artisan make:controller CarController
+
+
+// SingleActionControllers
+
+// SingleActionControllers are controllers  which are associated with single routes only.
+
+php artisan make:controller CarController --invokable
+
+// ResourceController
+
+In laravel "ResourceController" is a special type of controller that provides a convinient way to handle typical crud operations
+
+// ResourceController for API
+php artisan make:controller ProductController --api
+
+// views in laravel
+// views are files that are responsible for rendering the user interface of the application.
