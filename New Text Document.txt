@@ -95,3 +95,21 @@ php artisan make:controller ProductController --api
 
 // views in laravel
 // views are files that are responsible for rendering the user interface of the application.
+
+// Blade is laravel's templating engine that helps you to build HTML views efficently. It allows mixing html and php with simple and clean syntax
+
+// Blade core features.
+// Supports Template Inheritance -> allows to build base layout and extend it to other interface.
+// Provides Directives for control flow.
+// supports components and slots
+
+// command to make view
+php artisan make:view index
+
+// artisan command to make a view with into subfolder.
+php artisan make:view home.index
+
+// Rendering view using different Facades
+
+// To Share data b/w multiple view files.
+

@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\HelloController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShowCarController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 // Route::get('/', function () {
 //     // return view('welco');
@@ -217,4 +219,10 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/cars')->controller(HomeController::class)->group(function()
 {
     Route::get('index','index');
+    // Rendering view using different Facades
+
 })->name('home');
+
+Route::get('/hello',[HelloController::class,'welcome']);
+// Route::get('/new-car',function)
+Route::view('/test','test');
