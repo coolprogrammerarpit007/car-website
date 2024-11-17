@@ -113,3 +113,15 @@ php artisan make:view home.index
 
 // To Share data b/w multiple view files.
 
+
+// checked Directives
+<input type = "checkbox" @checkbox(Boolean Expression)
+
+selected Directives
+
+<select name="year">
+    @foreach($years as $year)
+        <option value="{{$year}}">
+            @selected($year == date('y))>
+        </option>
+</select>

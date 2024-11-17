@@ -4,8 +4,10 @@ use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShowCarController;
+use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
@@ -222,7 +224,13 @@ Route::prefix('/cars')->controller(HomeController::class)->group(function()
     // Rendering view using different Facades
 
 })->name('home');
+Route::get('/signup', [SignUpController::class,'create'])->name('register');
+Route::get('/login', [LoginController::class,'create'])->name('signin');
+// Route::get('/',function()
+// {
+//     return 'testing';
+// });
+// Route::get('/hello',[HelloController::class,'welcome']);
+// // Route::get('/new-car',function)
+// Route::view('/test','test');
 
-Route::get('/hello',[HelloController::class,'welcome']);
-// Route::get('/new-car',function)
-Route::view('/test','test');
