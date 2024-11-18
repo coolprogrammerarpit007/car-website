@@ -125,3 +125,22 @@ selected Directives
             @selected($year == date('y))>
         </option>
 </select>
+
+// laravel provides two types of components.
+// 1. class based components
+// 2. Anonmous Components
+
+// Artisan command to generate components
+php artisan make:component Card --view
+
+
+// Component Slots
+// A component slot  is a placeholder where you can insert the custom content when you use the component.
+// it allows you to pass different pieces of content into a pre-defined section of a component making the component flexible and reusable.
+
+// There are two types of slots
+1. default slots
+2. named slots
+
+
+// class Based Components
