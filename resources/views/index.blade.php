@@ -15,7 +15,7 @@
 
     {{-- Slots  --}}
      {{-- <x-admin.cards>
-        <x-slot:title>Heder Title</x-slot:title>
+        <x-slot:title color="red">Heder Title</x-slot:title>
         {{-- <x-slot name="title">Heder Title</x-slot> --}}
         {{-- Card Component 1 --}}
         {{-- <x-slot name="footer">Footer Title</x-slot> --}}
@@ -134,7 +134,7 @@
       {{-- Main Section --}}
       <main>
         <!-- Find a car form -->
-        <x-search-form/>
+        <x-search-form action="/search" method="GET"/>
         <!--/ Find a car form -->
 
         <!-- New Cars -->

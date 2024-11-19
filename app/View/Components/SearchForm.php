@@ -11,15 +11,19 @@ class SearchForm extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+
+    public string $action;
+    public string $method;
+    public function __construct(string $action, string $method)
     {
-        //
+        $this->action = $action;
+        $this->method = $method;
     }
 
-    public function test()
-    {
-        return 'test';
-    }
+    // public function test()
+    // {
+    //     return 'test';
+    // }
 
     /**
      * Get the view / contents that represent the component.

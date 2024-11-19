@@ -144,3 +144,5 @@ php artisan make:component Card --view
 
 
 // class Based Components
+// Artisan command to build class based component
+php artisan make:component SearchForm -> componentName
